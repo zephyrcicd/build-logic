@@ -33,6 +33,8 @@ fun Project.configJunitPlatform()  {
 }
 
 
+
+
 /**
  * 配置Java版本兼容性
  * 统一设置sourceCompatibility和targetCompatibility

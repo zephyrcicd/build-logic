@@ -1,6 +1,7 @@
+package site.addzero.buildlogic.spring
 
 plugins {
-    id("spring-common")
+    id("site.addzero.buildlogic.spring.spring-common")
 }
 
 dependencies {
