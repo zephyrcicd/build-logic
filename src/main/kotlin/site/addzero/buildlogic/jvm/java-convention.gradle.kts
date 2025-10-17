@@ -1,6 +1,6 @@
-package site.addzero.buildlogic.jvm
-
 import org.gradle.accessors.dm.LibrariesForLibs
+import org.gradle.kotlin.dsl.`java-library`
+import org.gradle.kotlin.dsl.the
 import site.addzero.gradle.*
 
 plugins {

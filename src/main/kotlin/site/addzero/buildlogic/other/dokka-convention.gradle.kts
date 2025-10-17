@@ -1,4 +1,3 @@
-package site.addzero.buildlogic.other
 
 import org.gradle.kotlin.dsl.invoke
 import org.jetbrains.dokka.gradle.DokkaTask

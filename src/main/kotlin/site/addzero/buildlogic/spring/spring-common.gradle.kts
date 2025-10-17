@@ -1,10 +1,9 @@
-package site.addzero.buildlogic.spring
 
 import org.gradle.accessors.dm.LibrariesForLibs
 
 
 plugins {
-    id("site.addzero.buildlogic.jvm.kotlin-convention")
+    id("kotlin-convention")
     kotlin("plugin.spring")
     id("io.spring.dependency-management")
 }

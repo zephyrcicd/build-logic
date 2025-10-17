@@ -1,7 +1,6 @@
-package site.addzero.buildlogic.spring
 
 plugins {
-    id("site.addzero.buildlogic.spring.spring-convention")
+    id("spring-convention")
 }
 
 
