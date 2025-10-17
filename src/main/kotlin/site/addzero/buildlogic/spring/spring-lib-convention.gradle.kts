@@ -1,5 +1,7 @@
+package site.addzero.buildlogic.spring
+
 plugins {
-    id("spring-common")
+    id("site.addzero.buildlogic.spring.spring-common")
     id("org.springframework.boot") apply false
 }
 
@@ -9,7 +11,7 @@ afterEvaluate {
     if (plugins.hasPlugin("org.springframework.boot")) {
         tasks.findByName("bootJar")?.enabled = false
     }
-    
+
     // 启用普通jar任务
     tasks.findByName("jar")?.enabled = true
 }

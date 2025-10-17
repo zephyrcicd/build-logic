@@ -1,41 +1,27 @@
+//import  site.addzero.gradle.AdzeroJavaExtension
+
 plugins {
     `kotlin-dsl`
-
     alias(libs.plugins.addzeroPublishBuddy)
 }
 
-//buildscript {
-//    repositories {
-//        gradlePluginPortal()
-//    }
-//    dependencies {
-//        classpath(libs.gradlePlugin.buildkonfig)
-//    }
-//}
-
 repositories {
-//    mavenLocal()
+    mavenLocal()
     mavenCentral()
     google()
     gradlePluginPortal()
 }
 
 dependencies {
-    implementation(libs.gradlePlugin.mavenPublish)
-    implementation(libs.org.graalvm.buildtools.native.gradle.plugin)
-    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
-    implementation(libs.snakeyaml)
+    gradleApi()
+    compileOnly(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
+    compileOnly(libs.gradlePlugin.jetbrainsCompose)
+    compileOnly(libs.gradlePlugin.kotlinSerialization)
     implementation(libs.gradlePlugin.dokka)
     implementation(libs.gradlePlugin.kotlin)
-    implementation(libs.gradlePlugin.kotlinSerialization)
     implementation(libs.gradlePlugin.mavenPublish)
-    implementation(libs.gradlePlugin.kotlinSpring)
+    implementation(libs.org.graalvm.buildtools.native.gradle.plugin)
     implementation(libs.gradlePlugin.dependencyManagement)
     implementation(libs.gradlePlugin.springBoot)
-
-
-//    kmp
-    implementation(libs.gradlePlugin.jetbrainsCompose)
-
-
+    implementation(libs.gradlePlugin.kotlinSpring)
 }
