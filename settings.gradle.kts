@@ -1,4 +1,4 @@
-rootProject.name = "build-logic"
+rootProject.name = rootDir.name
 
 //dependencyResolutionManagement {
 //    versionCatalogs {

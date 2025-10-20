@@ -1,8 +1,5 @@
-//import  site.addzero.gradle.AdzeroJavaExtension
-
 plugins {
     `kotlin-dsl`
-    alias(libs.plugins.addzeroPublishBuddy)
 }
 
 repositories {
@@ -19,7 +16,6 @@ dependencies {
     compileOnly(libs.gradlePlugin.kotlinSerialization)
     implementation(libs.gradlePlugin.dokka)
     implementation(libs.gradlePlugin.kotlin)
-    implementation(libs.gradlePlugin.mavenPublish)
     implementation(libs.org.graalvm.buildtools.native.gradle.plugin)
     implementation(libs.gradlePlugin.dependencyManagement)
     implementation(libs.gradlePlugin.springBoot)
