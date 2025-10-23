@@ -1,7 +1,8 @@
 [versions]
 addzeroGradleToolVersion ="2025.09.26"
+addzeroKspBuddyVersion="2025.09.26"
 addzeroPublishBuddyVersion="2025.09.26"
-addzeroJvmVersion ="0.0.656"
+addzeroJvmVersion="0.0.656"
 comCodingfelineBuildkonfigGradlePlugin = "0.17.1"
 hivemqMqttClientVersion = "1.3.9"
 jdk = "8"
@@ -46,6 +47,7 @@ gradleMavenPublishPlugin = "0.34.0"
 dependencyManagementPlugin = "1.1.7"
 snakeyaml = "2.5"
 springBootGradlePlugin = "2.5.14"
+mybatisPlus = "3.5.3.1"
 
 
 postgresql = "42.7.7"
@@ -169,12 +171,14 @@ kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.
 junit = { module = "junit:junit", version.ref = "junit" }
 kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 
+mybatis-plus-annotation = { module = "com.baomidou:mybatis-plus-annotation", version.ref = "mybatisPlus" }
+mybatis-plus-generator = { module = "com.baomidou:mybatis-plus-generator", version.ref = "mybatisPlus" }
+
 [plugins]
-addzeroKspBuddy = { id = "site.addzero.ksp-buddy", version.ref = "addzeroJvmVersion" }
+addzeroKspBuddy = { id = "site.addzero.ksp-buddy", version.ref = "addzeroKspBuddyVersion" }
 addzeroPublishBuddy = { id = "site.addzero.publish-buddy", version.ref = "addzeroPublishBuddyVersion" }
 addzeroPublishBuddyNew = { id = "site.addzero.buildlogic.publish.publish-buddy", version.ref = "addzeroJvmVersion" }
 addzeroVersionBuddy= { id = "site.addzero.buildlogic.version-buddy", version.ref = "addzeroJvmVersion" }
-
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
