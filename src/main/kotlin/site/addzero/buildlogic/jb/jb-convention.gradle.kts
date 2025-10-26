@@ -33,7 +33,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaCommunity("2024.2.5")
+        intellijIdeaUltimate("2025.2.3")
 //        testFramework(TestFrameworkType.Platform)
         bundledPlugins(
             "com.intellij.java", "org.jetbrains.kotlin"
