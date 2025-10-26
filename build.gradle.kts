@@ -20,4 +20,7 @@ dependencies {
     implementation(libs.gradlePlugin.dependencyManagement)
     implementation(libs.gradlePlugin.springBoot)
     implementation(libs.gradlePlugin.kotlinSpring)
+
+     implementation("org.jetbrains.intellij.platform:org.jetbrains.intellij.platform.gradle.plugin:2.10.2")
+     implementation("org.jetbrains.changelog:org.jetbrains.changelog.gradle.plugin:2.4.0")
 }
