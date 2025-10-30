@@ -47,7 +47,7 @@ gradleMavenPublishPlugin = "0.34.0"
 dependencyManagementPlugin = "1.1.7"
 snakeyaml = "2.5"
 springBootGradlePlugin = "2.5.14"
-mybatisPlus = "3.5.1"
+mybatisPlus = "3.5.3.1"
 
 
 postgresql = "42.7.7"
