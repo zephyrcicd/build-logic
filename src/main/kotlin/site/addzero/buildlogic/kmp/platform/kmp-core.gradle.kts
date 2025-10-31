@@ -1,13 +1,9 @@
 @file:OptIn(ExperimentalWasmDsl::class)
 
-import org.gradle.accessors.dm.LibrariesForLibs
-import org.gradle.kotlin.dsl.the
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.internal.platform.wasm.WasmPlatforms.wasmJs
 
-val libs = the<LibrariesForLibs>()
 plugins {
-    id("org.jetbrains.kotlin.multiplatform")
+    id("kmp")
 }
 kotlin {
     mingwX64()
@@ -36,5 +32,5 @@ kotlin {
 //    mingwX64()
 //    linuxX64()
 //    linuxArm64()
-}
 
+}

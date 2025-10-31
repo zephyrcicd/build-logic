@@ -1,4 +1,5 @@
 rootProject.name = rootDir.name
+//includeBuild("../../lib/gradle-plugin/gradle-tool")
 
 //dependencyResolutionManagement {
 //    versionCatalogs {

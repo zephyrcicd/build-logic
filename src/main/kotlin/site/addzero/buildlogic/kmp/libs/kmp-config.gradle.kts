@@ -1,0 +1,27 @@
+import com.codingfeline.buildkonfig.compiler.FieldSpec
+import org.gradle.declarative.dsl.schema.FqName.Empty.packageName
+//import site.addzero.gradle.tool.defByClass
+//import site.addzero.gradle.tool.defByMap
+import site.addzero.gradle.BuildSettings
+buildscript {
+    dependencies {
+        classpath("site.addzero.gradle:gradle-tool")
+    }
+}
+
+plugins {
+    id("com.codingfeline.buildkonfig")
+}
+
+buildkonfig {
+    packageName = "site.addzero"
+//    defaultConfigs {
+//        defByClass(BuildSettings::class)
+//    }
+
+    defaultConfigs("dev") {
+        buildConfigField(FieldSpec.Type.STRING, "test", "aaa")
+    }
+
+
+}

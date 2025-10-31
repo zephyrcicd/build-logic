@@ -1,4 +1,4 @@
-package site.addzero.buildlogic.jb
+package site.addzero.buildlogic.intellij
 
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.intellij.platform.gradle.tasks.RunIdeTask
@@ -32,26 +32,9 @@ repositories {
 }
 
 dependencies {
-    intellijPlatform {
-        intellijIdeaUltimate("2025.2.3")
-//        testFramework(TestFrameworkType.Platform)
-        bundledPlugins(
-            "com.intellij.java", "org.jetbrains.kotlin"
-//            , "org.intellij.groovy"  // Correct Groovy plugin ID
-        )
+//           testFramework(TestFrameworkType.Platform)
 
-    }
 
-    // 引用拆分后的模块
-//    implementation(project(":modules:autoddl-starter"))
-//    implementation(project(":modules:intention-actions"))
-//    implementation(project(":modules:code-actions"))
-//    implementation(project(":modules:utilities"))
-//    implementation(project(":modules:ai-assistant"))
-//    implementation(project(":modules:core-utils"))
-//    implementation(project(":modules:settings"))
-//    implementation(project(":modules:tool-windows"))
-//    implementation(project(":modules:main-module"))
 
 }
 
