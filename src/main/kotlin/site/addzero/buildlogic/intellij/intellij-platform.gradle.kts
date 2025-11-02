@@ -1,14 +1,51 @@
 package site.addzero.buildlogic.intellij
 
+import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.intellij.platform.gradle.tasks.RunIdeTask
 
 
 plugins {
     id("site.addzero.buildlogic.intellij.intellij-core")
+    id("org.jetbrains.changelog")
+
+}
+
+fun String.md2html(): String {
+    val file = File(projectDir, this)
+    if (!file.exists()) {
+        file.parentFile.mkdirs()
+        file.createNewFile()
+    }
+    val run = file.readText().run {
+        markdownToHTML(this)
+    }
+    return run
+}
+
+dependencies {
+    intellijPlatform {
+        intellijIdeaUltimate("2025.2.3")
+        bundledPlugins(
+            "com.intellij.java", "org.jetbrains.kotlin"
+        )
+
+    }
 }
 
 
 
+
+intellijPlatform {
+    pluginConfiguration {
+        vendor {
+            name = "zjarlin"
+            email = "zjarlin@outlook.com"
+        }
+        description = "README.md".md2html()
+        changeNotes = "CHANGELOG.md".md2html()
+    }
+
+}
 
 
 tasks {
