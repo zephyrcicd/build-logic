@@ -16,6 +16,7 @@ dependencies {
 
     ////////////jvm/////////////////////
 //    implementation(libs.addzero.gradle.tool)
+    implementation(libs.com.diffplug.spotless.com.diffplug.spotless.gradle.plugin)
 
     implementation(libs.gradlePlugin.dokka)
     implementation(libs.gradlePlugin.kotlin)
@@ -27,8 +28,8 @@ dependencies {
     implementation(libs.gradlePlugin.kotlinSpring)
 
     /////////////////intellij///////////////
-     implementation("org.jetbrains.intellij.platform:org.jetbrains.intellij.platform.gradle.plugin:2.10.2")
-     implementation("org.jetbrains.changelog:org.jetbrains.changelog.gradle.plugin:2.4.0")
+    implementation("org.jetbrains.intellij.platform:org.jetbrains.intellij.platform.gradle.plugin:2.10.2")
+    implementation("org.jetbrains.changelog:org.jetbrains.changelog.gradle.plugin:2.4.0")
 
 
     /////////////////kmp///////////////
@@ -44,8 +45,7 @@ dependencies {
 
 
     ///////////////ksp///////////
-   implementation(libs.gradlePlugin.ksp)
-
+    implementation(libs.gradlePlugin.ksp)
 
 
 }
