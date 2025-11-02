@@ -9,6 +9,16 @@ repositories {
     gradlePluginPortal()
 }
 
+gradlePlugin {
+    plugins {
+        register(rootDir.name) {
+            id = rootDir.name
+            implementationClass = "site.addzero.gradle.BuildLogicPlugin"
+        }
+    }
+}
+
+
 dependencies {
     gradleApi()
     compileOnly(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
