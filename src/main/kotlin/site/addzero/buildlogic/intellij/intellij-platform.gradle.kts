@@ -1,66 +1,14 @@
 package site.addzero.buildlogic.intellij
 
-import org.gradle.kotlin.dsl.named
-import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.intellij.platform.gradle.tasks.RunIdeTask
 
 
 plugins {
-    id("org.jetbrains.intellij.platform")
-    id("org.jetbrains.changelog")
-    id("site.addzero.buildlogic.jvm.kotlin-convention")
-
-
-}
-repositories {
-    mavenCentral()
-    intellijPlatform {
-        releases()
-        marketplace()
-        defaultRepositories()
-    }
+    id("site.addzero.buildlogic.intellij.intellij-core")
 }
 
 
 
-dependencies {
-    intellijPlatform {
-        intellijIdeaUltimate("2025.2.3")
-        bundledPlugins(
-            "com.intellij.java", "org.jetbrains.kotlin"
-        )
-
-    }
-
-}
-
-fun String.md2html(): String {
-    val file = File(projectDir, this)
-    if (!file.exists()) {
-        file.parentFile.mkdirs()
-        file.createNewFile()
-    }
-    val run = file.readText().run {
-        markdownToHTML(this)
-    }
-    return run
-}
-
-
-
-
-
-
-intellijPlatform {
-    pluginConfiguration {
-        vendor {
-            name = "zjarlin"
-            email = "zjarlin@outlook.com"
-        }
-        description = "README.md".md2html()
-        changeNotes = "CHANGELOG.md".md2html()
-    }
-}
 
 
 tasks {
@@ -78,6 +26,10 @@ tasks {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
 }
+
+
+
+
 
 tasks.named<RunIdeTask>("runIde") {
     jvmArgumentProviders += CommandLineArgumentProvider {
