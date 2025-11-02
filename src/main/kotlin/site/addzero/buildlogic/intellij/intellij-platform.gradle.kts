@@ -22,15 +22,6 @@ fun String.md2html(): String {
     return run
 }
 
-dependencies {
-    intellijPlatform {
-        intellijIdeaUltimate("2025.2.3")
-        bundledPlugins(
-            "com.intellij.java", "org.jetbrains.kotlin"
-        )
-
-    }
-}
 
 
 
