@@ -1,5 +1,7 @@
 [versions]
-addzero-lib = "2025.09.29"
+# 大发版 稳定版本
+#addzero-lib = "2025.09.29"
+addzero-lib = "0.0.672"
 
 
 #addzeroGradleToolVersion ="0.0.652"
