@@ -10,7 +10,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation("site.addzero:addzero-tool-json:${libs.versions.addzero.lib.get()}")
+            implementation("site.addzero:tool-json:${libs.versions.addzero.lib.get()}")
         }
     }
 

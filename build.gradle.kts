@@ -22,7 +22,8 @@ gradlePlugin {
 dependencies {
     gradleApi()
     compileOnly(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
-
+    // 关键：添加 Guice 依赖，解决 Sisu 模块的父类解析问题
+    implementation("com.google.inject:guice:4.2.3") // 稳定兼容版本
 
     ////////////jvm/////////////////////
 //    implementation(libs.addzero.gradle.tool)
