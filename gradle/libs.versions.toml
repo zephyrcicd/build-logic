@@ -4,6 +4,7 @@
 addzero-lib = "0.0.672"
 mybatisAutoWrapper="0.0.673"
 
+addzero-lib1="0.0.673"
 
 #addzeroGradleToolVersion ="0.0.652"
 addzeroGradleToolVersion ="+"
